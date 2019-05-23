@@ -1,0 +1,27 @@
+     @media all and (max-width: 768px) and (max-width: 1200px) {
+         body {
+             margin-left: 2%;
+         }
+         #int {
+             color: white;
+         }
+         .love {
+             padding-left: 18%;
+             margin-top: 5%;
+         }
+         #with {
+             margin-bottom: 3%;
+         }
+         #by {
+             margin-bottom: 3%;
+         }
+         #but_form {
+             margin-left: 29%;
+         }
+     }
+     /* @media(min-width:300px) {
+         #with {
+             margin-right: 35%;
+             margin-bottom: 3%;
+         }
+     } */

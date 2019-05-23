@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/main.css")
+    @Styles.Render("~/Content/media.css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <!-- Header is READY -->
+
+    <div style="background-color: #383745; color:white;" class="container-fluid header ">
+        <div class="container">
+            <div class="row head-cont">
+                <div class="head-item d-flex flex-column justify-content-center align-items-md-end col-md-10">
+                    <span>Uktaine, c.Kyiv,</span>
+                    <span>Obolonskaya nabereshna, 26h, of.11</span>
+                </div>
+                <div class="head-item d-flex flex-column justify-content-center align-items-md-end col-md-2">
+                    <span>+38(044)593-93-76</span>
+                    <span>+38(067)404-78-40</span>
+                </div>
+            </div>
+        </div>
+        <div class="navbar-header">
+            <button style="border-radius:30%; background-color: #F2F2F7;" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span style="background-color:#383745;" class="icon-bar"></span>
+                <span style="background-color:#383745;" class="icon-bar"></span>
+                <span style="background-color:#383745;" class="icon-bar"></span>
+            </button>
+            @Html.ActionLink("TRAVEL & TOURISM", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        </div>
+        <div class="navbar-collapse collapse ">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("About", "Buy", "Home")</li>
+                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+               
+            </ul>
+        </div>
+
+    </div>
+
+   
+    @RenderBody()
+    <!-- Footer is READY -->
+    <footer id="contacts" class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-12 d-flex flex-column justify-content-center align-items-md-start align-items-center footer-column">
+                    <div class="text-white"><a href="#about_us">About us</a></div>
+                    <div class="text-white"><a href="#clients">Clients</a></div>
+                    <div class="text-white"><a href="#contacts">Contacts</a></div>
+                </div>
+                <div class="col-md-4 col-sm-12 d-flex flex-column justify-content-center align-items-md-start align-items-center footer-column">
+                    <div class="text-white"><a href="#reviwes">Reviews</a></div>
+                    <div class="text-white"><a href="#call_us">Call us</a></div>
+                    <div class="text-white"><a href="#advertising">Atvertising</a></div>
+                </div>
+                <div class="col-md-4 col-sm-12 d-flex flex-column align-items-md-end align-items-center pt-3 pt-md-0 pt-sm-3">
+                    <div class="text-white">Uktaine, c.Kyiv,</div>
+                    <div class="text-white">Obolonskaya nabereshna, 26h, of.11</div>
+                </div>
+                <div class="col-md-2 col-sm-12 d-flex flex-column align-items-md-end align-items-center footer-column">
+                    <div class="text-white">+38(044)593-93-76</div>
+                    <div class="text-white">+38(067)404-78-40</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/scripts/js_style.js")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,134 @@
+﻿@model startPage.Models.About
+@{
+    ViewBag.Title = "Home Page";
+}
+<!-- Main is ... -->
+<main id="main" class="container-fluid ">
+    <br>
+    <div class=" first-section">
+        <div class="row logo">
+            <div class=" col-md-4 col-sm-6 col-xs-6  d-flex  flex-column justify-content-center text-center align-items-center ">
+                <img style="margin-top: 4%;"id="warsaw" src="../img/logo2.png" alt="">
+            </div>
+            <div style="padding-top:0"class="col-md-8 col-sm-6 col-xs-6 white-strip">
+
+                <h1>TRAVEL & TOURISM </h1>
+                <h2>WARSAW </h2>
+                <h2>ORGANIZATION</h2>
+
+            </div>
+        </div>
+    </div>
+</main>
+<!--First-section is ready-->
+<div id="about_us" class="conteiner-fluid second-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6  d-flex  flex-column justify-content-center  align-items-center text-center about_us">
+                <h2>About us</h2>
+                <div class="description">
+                    <span>@Model.AboutContent
+                        @*Warsaw Tourism Organization works on Sites All Ukraine For 25 years and is one of the leaders in providing services
+                        to Sites All business tourism in Ukraine Thanks to the unchangeable rate of innovation, activity and invariably
+                        High quality of services that are provided.*@
+                    </span>
+                    <p>During the years of our successful activity, our company has become a member of leading professional organizations and associations, among them:</p>
+                    <ol>
+                        <li>American Chamber of Commerce in Ukraine (ACC)</li>
+                        <li>European Business Association (EAA)</li>
+                        <li>American Association of Travel Agents (ASTA)</li>
+                        <li>Kyiv Association of Travel Agencies (KyivAA)</li>
+                        <li>Tourist aa3s.jpg Ukrainian Association (TAU) and others.</li>
+
+                    </ol>
+                </div>
+            </div>
+            <div class="col-md-6  d-flex  flex-column justify-content-center  align-items-center">
+                <img name="map" src="../img/travel.jpg" alt="">
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="#call_us" class="container-fluid third-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1 col-sm-6 col-xs-6 d-flex  flex-column justify-content-center  align-items-center">
+                <div style="width:64px;height:64px;"class="facebook">
+                    <a href="https://www.facebook.com/"><img id="face" src="../img/book.png" alt=""></a>
+
+                </div>
+            </div>
+            <div class="col-md-1 col-sm-6 col-xs-6  d-flex  flex-column justify-content-center  align-items-center ">
+                <div style="width:64px;height:64px;" class="instagram">
+                    <a href="https://www.instagram.com/"><img id="inst" src="../img/pop.png" alt=""></a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 col-xs-12 d-flex  flex-column justify-content-center  align-items-center full-form">
+                <p id="order"><b>Order the trip of your dream!</b></p>
+                <form  method="post" action="">
+                    <fieldset>
+                        <input type="hidden" name="UserId" value="@ViewBag.Id"/>
+                        <div>
+                            <label for="name">
+                                <span>Your Name:</span>
+                            </label>
+                            <input style="color:black" name="Name" type="text" required>
+                        </div>
+                        <div>
+                            <label for="email">
+                                <span>Your E-mail:</span>
+                            </label>
+                            <input style="color:black" name="Email" type="text">
+                        </div>
+                        <div>
+                            <label for="number_phone">
+                                <span>Number phone:</span>
+                            </label>
+                            <input style="color:black" name="Phone" type="text" required>
+                        </div>
+                        <div>
+                            <span>Choose your country:</span>
+                            <select style="color:black" name="city">
+
+                                <option value="Kyiv">Kyiv</option>
+                                <option value="Lviv">Lviv</option>
+                                <option value="Odessa">Odessa</option>
+                                <option value="Dnipro">Dnipro</option>
+                                <option value="Kharkiv">Kharkiv</option>
+                                <option value="Kherson">Kherson</option>
+                            </select>
+                        </div>
+
+                    </fieldset>
+
+
+                    <div   id="subscribe">
+                        <input placeholder="rjorw" type="checkbox" id="su" name="accept" required>
+                        <label for="rules">
+                            Subscribe to the newsletter
+                        </label>
+                    </div>
+                    <div style="color:black" id="but_form">
+                        <input type="submit" value="Submit"/>
+                        <button type="reset"><b>Reset</b></button>
+                    </div>
+
+                </form>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12 love d-flex flex-column justify-content-center align-items-center  ">
+
+                <form style="color:black" action="" id="data">
+                    <p>
+                        <b id="int">What dates are you planning a trip to?</b><br> <input type="text" id="with" value=" with" onfocus="this.select();lcs(this)" onclick="event.cancelBubble=true;this.select();lcs(this)">
+                        <input type="text" id="by" value="by" onfocus="this.select();lcs(this)" onclick="event.cancelBubble=true;this.select();lcs(this)">
+                    </p>
+                </form>
+
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<!--Second-section is ready-->
